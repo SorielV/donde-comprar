@@ -877,6 +877,7 @@ body {
 	-o-transition: all .5s;
 	transition: all .5s;
 	overflow: hidden;
+	object-fit: scale-down;
 }
 .dream_box_1 a.dondecomprar_img {
 	display: block;
@@ -2210,13 +2211,13 @@ ul.rateing_star li a {
 */
 .dondecomprar_breadcrumb {
 	position: relative;
-	padding: 200px 0 120px;
+	padding: 200px 0 40px;
 	overflow: hidden;
-	background: -o-linear-gradient(45deg, rgba(254, 61, 109, 1) 0%, rgba(117, 19, 255, 1) 100%);
-	background: linear-gradient(45deg, rgba(254, 61, 109, 1) 0%, rgba(117, 19, 255, 1) 100%);
-	/*background: -moz-linear-gradient( 0deg, rgb(254,61,108) 0%, rgb(119,19,255) 100%);
-	background: -webkit-linear-gradient( 0deg, rgb(254,61,108) 0%, rgb(119,19,255) 100%);
-	background: -ms-linear-gradient( 0deg, rgb(254,61,108) 0%, rgb(119,19,255) 100%);*/
+	background: -o-linear-gradient(65deg, rgb(32, 44, 224) 0%, rgb(19, 129, 255) 100%);
+	background: linear-gradient(65deg, rgb(32, 44, 224) 0%, rgb(19, 129, 255) 100%);
+	/*background: -moz-linear-gradient( 0deg, rgb(32, 44, 224) 0%, rgb(19, 129, 255) 100%);
+	background: -webkit-linear-gradient( 0deg, rgb(32, 44, 224) 0%, rgb(19, 129, 255) 100%);
+	background: -ms-linear-gradient( 0deg, rgb(32, 44, 224) 0%, rgb(19, 129, 255) 100%);*/
 }
 .dondecomprar_breadcrumb svg#shape_1 {
 	position: absolute;
@@ -2777,9 +2778,12 @@ input[type="file"] {
 	-webkit-box-shadow: 0px 0px 30px 0px rgba(13, 13, 13, 0.15);
 	box-shadow: 0px 0px 30px 0px rgba(13, 13, 13, 0.15);
 	margin-bottom: 30px;
+	border-radius: 10px;
 }
 .dondecomprar_listing_list .listing_item_box .dondecomprar_img {
 	width: 40%;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
 }
 .dondecomprar_listing_list .listing_item_box .listing_item_info {
 	width: 60%;
