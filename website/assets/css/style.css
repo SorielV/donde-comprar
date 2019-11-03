@@ -3828,9 +3828,9 @@ textarea.form_control {
 header.header_area.header_area_3 {
 	position: relative;
 	top: 0;
-	background: -o-linear-gradient(335deg, rgba(254, 61, 109, 1) 0%, rgba(117, 19, 255, 1) 100%);
-	background: -o-linear-gradient(25deg, rgba(254, 61, 109, 1) 0%, rgba(117, 19, 255, 1) 100%);
-	background: linear-gradient(65deg, rgba(254, 61, 109, 1) 0%, rgba(117, 19, 255, 1) 100%);
+	background: -o-linear-gradient(335deg, rgb(61, 74, 254) 0%, rgb(119, 19, 255) 100%);
+	background: -o-linear-gradient(25deg, rgb(61, 74, 254) 0%, rgb(119, 19, 255) 100%);
+	background: linear-gradient(65deg, rgb(61, 74, 254) 0%, rgb(119, 19, 255) 100%);
 }
 header.header_area.header_area_3 .menu_button .dondecomprar_btn {
 	background: #fff;
@@ -3841,8 +3841,8 @@ header.header_area.header_area_3 .menu_button .dondecomprar_btn {
 .dondecomprar_error_404 {
 	overflow: hidden;
 	position: relative;
-	padding-top: 120px;
-	padding-bottom: 120px;
+	padding-top: 100px;
+	padding-bottom: 100px;
 }
 .dondecomprar_error_404 img.cloud_1 {
 	position: absolute;
@@ -3899,8 +3899,8 @@ header.header_area.header_area_3 .menu_button .dondecomprar_btn {
 	}
 }
 .dondecomprar_error_404 .content_404 img {
-	margin-bottom: 60px;
-	width: 100%;
+	margin-bottom: 20px;
+	width: 70%;
 }
 .dondecomprar_error_404 .content_404 h2 {
 	margin-bottom: 45px;
