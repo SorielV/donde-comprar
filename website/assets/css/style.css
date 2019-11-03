@@ -2411,8 +2411,9 @@ ul.rateing_star li a {
 	border: 1px solid rgb(229, 233, 247);
 	-webkit-box-shadow: 0px 0px 30px 0px rgba(13, 13, 13, 0.1);
 	box-shadow: 0px 0px 30px 0px rgba(13, 13, 13, 0.1);
-	border-top-right-radius: 30px;
-	border-bottom-left-radius: 30px;
+	/* border-top-right-radius: 30px;
+	border-bottom-left-radius: 30px; */
+	border-radius: 15px;
 	-webkit-transition: all .5s;
 	-o-transition: all .5s;
 	transition: all .5s;
@@ -2422,9 +2423,15 @@ ul.rateing_star li a {
 }
 .team_box_1 .team_info .team_img {
 	padding: 20px;
+	height: 200px;
+	width: 330px;
+}
+.team_box_1 .team_info .team_img img {
+	max-height: 100%;
+	max-width: 100%;
 }
 .team_box_1 .team_info .team_text {
-	margin: 5px 0;
+	margin: 25px 0;
 }
 .team_box_1 .team_info .team_text h4 {
 	font-size: 18px;
