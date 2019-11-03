@@ -1,6 +1,9 @@
 # Donde Comprar ®
+![version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 
-_Un motor de busqueda para usuarios que busquen algun componente de computadora de una forma facil y rapida_
+![Product Presentation Image](/img_readme.jpg)
+
+_**Donde Comprar®** Es un motor de busqueda para usuarios que busquen algun componente de computadora de una forma facil y rapida._
 
 ## Comenzando 🚀
 
@@ -11,53 +14,59 @@ Mira **Deployment** para conocer como desplegar el proyecto.
 
 ### Pre-requisitos 📋
 
-_Que cosas necesitas para instalar el software y como instalarlas_
+_Esto es lo que necesitaras para instalar el repo y hacerlo jalar_
 
 ```
-Da un ejemplo
+ejemplo
 ```
 
 ### Instalación 🔧
 
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
+_Una serie de ejemplos paso a paso que te indica lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
 
-_Dí cómo será ese paso_
-
-```
-Da un ejemplo
-```
-
-_Y repite_
+_Paso 1_
 
 ```
-hasta finalizar
+npm Ejemplo paso 1
 ```
 
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
+_Paso 2_
+
+```
+npm Ejemplo paso 2
+```
+
+_Y así se podrña obtener los datos del sistema para oder hacer uso de ellos_
 
 ## Ejecutando las pruebas ⚙️
 
-_Explica como ejecutar las pruebas automatizadas para este sistema_
+_Pruebas automatizadas para este sistema_
 
-### Analice las pruebas end-to-end 🔩
+### Analice las pruebas End-to-End 🔩
 
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-```
-
-### Y las pruebas de estilo de codificación ⌨️
-
-_Explica que verifican estas pruebas y por qué_
+_Verificación de puevas End-to-End_
 
 ```
-Da un ejemplo
+Ejemplo
+```
+
+### Pruebas de estilo de codificación ⌨️
+
+_Se realizaron con Lint_
+
+```
+npm lint
 ```
 
 ## Deployment 📦
 
-_Agrega notas adicionales sobre como hacer deploy_
+_El deploy se realizo con [Netlify](https://www.netlify.com/)_
+
+## Browser Support
+
+En la actualidad, nuestro objetivo oficial es soportar las últimas dos versiones de los siguientes navegadores:
+
+<img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/chrome.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/firefox.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/edge.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/safari.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/opera.png" width="64" height="64">
 
 ## Construido con 🛠️
 
@@ -99,14 +108,15 @@ También puedes mirar la lista de todos los [contribuyentes](https://github.com/
 
 Este proyecto está bajo la Licencia (Apache License) - mira el archivo [LICENSE.md](LICENSE.md) para detalles.
 
-## Expresiones de Gratitud 🎁
+## Expresiones de Gratitud 👏🏻
 
-* Michelada.io por alentarnos a este proyecto. 📢
-* A todos los que hicieron posible este producto 🍺
-* Gracias a todos los que se toman el tiempo de revisar este proyecto 🤓.
+* **Michelada.io** por alentar este proyecto. 📢
+* O'Reilly - RedisLab - Nexmon - The Pragmatic Bookshelf 📢
+* A todos los que hicieron posible este producto. 🍺
+* Gracias a todos los que se toman el tiempo de revisar este proyecto. 🤓
 * Gracias a todos los contribuidores. ✌🏻
 
-
+#### Hackorama 2019
 
 ---
-Hecho con ❤️ por [cjdiaz18](https://github.com/cjdiaz18) | [SorielV](https://github.com/SorielV) | [aherreDev](https://github.com/aherreDev) 😊
+Hecho con ❤️ por CODE LOVERS [SorielV](https://github.com/SorielV) 🤓| [aherreDev](https://github.com/aherreDev) 😁| [cjdiaz18](https://github.com/cjdiaz18) 🙃
