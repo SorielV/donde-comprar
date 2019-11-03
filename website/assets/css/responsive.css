@@ -104,7 +104,7 @@
 	}
 	.header_bg_2 .filter_form.header_filter .form_group input.fi_width_1,
 	.filter_form.header_filter .form_group input.fi_width_1 {
-		width: 200px;
+		width: 500px;
 	}
 	.header_bg_2 .filter_form.header_filter .form_group .search_select {
 		width: 150px;
@@ -232,6 +232,9 @@
 
 /*Small devices (landscape phones, 576px and up)*/
 @media only screen and (max-width: 767px) {
+	.filter_button {
+		margin-top: 50px;
+	}
 	.listghor_title h2 {
 		font-size: 24px;
 		line-height: 32px;
@@ -253,6 +256,7 @@
 		font-size: 26px;
 		line-height: 32px;
 		margin-bottom: 15px;
+		margin-top: 50px;
 	}
 	.filter_form.header_filter form {
 		display: block;
@@ -264,7 +268,9 @@
 	}
 	.header_bg_2 .filter_form.header_filter form input.form_control,
 	.filter_form.header_filter form input.form_control {
-		width: 100% !important;
+		width: 350px !important;
+		text-align: center;
+		margin-bottom: 30px;
 	}
 	.header_bg_2 .filter_form.header_filter .form_group .search_select,
 	.filter_form.header_filter .form_group .search_select {
