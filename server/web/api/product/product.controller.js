@@ -1,6 +1,6 @@
-const { Product } = require('../../../models')
+import { Product } from '../../../models'
 
-module.exports = {
+export default {
   async getProducts (req, res, next) {
     const {
       pagination,

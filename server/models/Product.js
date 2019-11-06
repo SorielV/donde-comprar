@@ -1,6 +1,5 @@
-const Mongoose = require('mongoose')
-const { Schema } = Mongoose
-const { slugify } = require('./../utils')
+import Mongoose, { Schema } from 'mongoose'
+import { slugify } from './../utils'
 
 const ProductSchema = new Schema({
   name: {
@@ -54,9 +53,9 @@ const ProductSchema = new Schema({
 ProductSchema.pre('save', function (next) {
   if (!this.isModified('title')) {
     return next()
-  } 
-  this.shops = this.price.map(({ origin }) => origin)
+  }
 
+  this.shops = this.price.map(({ origin }) => origin)
   this.slug = slugify(this.title)
   return next()
 })
@@ -67,4 +66,4 @@ ProductSchema.pre('update', function () {
 
 const Product = Mongoose.model('Product', ProductSchema)
 
-module.exports = Product
+export default Product

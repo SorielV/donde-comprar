@@ -1,5 +1,3 @@
-const db = require('./db')
+import db from './db'
 
-module.exports = {
-  db
-}
+export { db }

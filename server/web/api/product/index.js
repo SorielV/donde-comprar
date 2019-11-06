@@ -1,3 +1,3 @@
-const api = require('./product.api')
+import api from './product.api'
 
-module.exports = api
+export default api

@@ -1,33 +1,29 @@
-require("dotenv").config()
-const path = require("path")
-const { db } = require("../config")
-const { slugify } = require("../utils")
-db.connect()
+import 'dotenv/config'
 
-const { Product, Brand, Category, Shop } = require("../models")
-const { readdirSync } = require("fs")
-const { readFile } = require("fs").promises
-const baseDir = path.resolve(process.env.DATA_FOLDER || "./data/")
-const files = readdirSync(
-  path.resolve(process.env.DATA_FOLDER || "./data/")
-).filter(file => file.endsWith(".json"))
+import path from 'path'
+import { db } from '../config'
+import { slugify } from '../utils'
+
+import { Product, Brand, Category, Shop } from '../models'
+import { readFile, readdir } from 'fs/promises'
+
+const baseDir = path.resolve(process.env.DATA_FOLDER || './data/')
 
 const readJSON = async file => {
   const data = await readFile(path.join(baseDir, file))
   return JSON.parse(data)
 }
 
-function getPrice(price) {
-  console.log(price)
+function getPrice (price) {
   return {
     origin: price.origin,
-    original: price.original.toString().replace(",", ""),
-    discount: price.discount.toString().replace(",", ""),
+    original: price.original.toString().replace(',', ''),
+    discount: price.discount.toString().replace(',', ''),
     image: price.url
   }
 }
 
-async function start(files) {
+async function start (files) {
   const brands = []
   const categories = []
   const shops = []
@@ -74,17 +70,9 @@ async function start(files) {
             await category.save()
             item.category = category.slug
             categories.push(category.slug)
-            /* if (category.refersTo) {
-              categoriesReference[category.slug] = category.refersTo
-            } */
           } else {
             categories.push(category.slug)
           }
-          /* if (category.refersTo) {
-            categoriesReference[item.category] = category.refersTo
-            categories.push(category.refersTo)
-            item.category = category.refersTo
-          } */
         }
       }
 
@@ -128,7 +116,10 @@ async function start(files) {
 }
 
 /* eslint-disable no-console */
-start(files)
+db.connect()
+  .then(() => readdir(baseDir))
+  .then((files) => files.filter(file => file.endsWith('.json')))
+  .then((files) => start(files))
   .then(() => process.exit(0))
   .catch(err => {
     console.error(err)

@@ -1,16 +1,14 @@
-require('dotenv').config()
-const path = require('path')
-const { db } = require('./../config')
+import 'dotenv/config'
 
-const { writeFile } = require('fs').promises
+import path from 'path'
+import { db } from './../config'
+import { writeFile } from 'fs/promise'
+import Models from './../models'
+
+const models = ['Brand', 'Category', 'Product', 'Shop']
 const baseDir = path.resolve(process.env.DATA_EXPORT_FOLDER || './export/')
 
-const Models = require('./../models')
-const models = ['Brand', 'Category', 'Product', 'Shop']
-
-db.connect()
-
-async function start() {
+async function start () {
   return Promise.all(models.map(async model => {
     const Model = Models[model]
     const items = await Model.find()
@@ -19,7 +17,8 @@ async function start() {
 }
 
 /* eslint-disable no-console */
-start()
+db.connect()
+  .then(_ => start())
   .then(() => process.exit(0))
   .catch(err => {
     console.error(err)

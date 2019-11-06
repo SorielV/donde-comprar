@@ -1,9 +1,9 @@
-const Brand = require('./Brand')
-const Category = require('./Category')
-const Product = require('./Product')
-const Shop = require('./Shop')
+import Brand from './Brand'
+import Category from './Category'
+import Product from './Product'
+import Shop from './Shop'
 
-module.exports = {
+export {
   Brand,
   Category,
   Product,

@@ -1,6 +1,5 @@
-const Mongoose = require('mongoose')
-const { Schema } = Mongoose
-const { slugify } = require('../utils')
+import Mongoose, { Schema } from 'mongoose'
+import { slugify } from './../utils'
 
 const ShopSchema = new Schema({
   name: {
@@ -11,7 +10,7 @@ const ShopSchema = new Schema({
   slug: {
     type: String,
     required: false,
-    default() {
+    default () {
       return slugify(this.name)
     }
   },
@@ -22,4 +21,4 @@ const ShopSchema = new Schema({
 
 const Shop = Mongoose.model('Shop', ShopSchema)
 
-module.exports = Shop
+export default Shop

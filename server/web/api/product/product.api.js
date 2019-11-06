@@ -1,6 +1,6 @@
-const { Router } = require('express')
-const Controller = require('./product.controller')
-const { errorHandle, queryOptions } = require('../../middlware')
+import { Router } from 'express'
+import Controller from './product.controller'
+import { errorHandle, queryOptions } from '../../middlware'
 
 const router = Router()
 
@@ -14,5 +14,5 @@ const defaultPagination = {
   strictFilter: true
 }
 
-module.exports = router
+export default router
   .get('/', queryOptions(defaultPagination), errorHandle(Controller.getProducts))

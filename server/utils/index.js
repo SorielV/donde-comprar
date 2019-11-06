@@ -1,6 +1,6 @@
-const isNullOrUndefined = _ => _ === undefined || _ === null
+export const isNullOrUndefined = _ => _ === undefined || _ === null
 
-const slugify = originalText => {
+export const slugify = originalText => {
   if (!originalText) {
     return ''
   }
@@ -111,7 +111,7 @@ const getSortOrder = (
   return sortOption
 }
 
-const getQueryOptions = (query, defaultOptions) => {
+export const getQueryOptions = (query, defaultOptions) => {
   const options = {}
 
   return {
@@ -122,10 +122,4 @@ const getQueryOptions = (query, defaultOptions) => {
       ...getSortOrder(query, defaultOptions, options)
     }
   }
-}
-
-module.exports = {
-  slugify,
-  isNullOrUndefined,
-  getQueryOptions
 }

@@ -1,5 +1,3 @@
-const productAPI = require('./product')
+import productAPI from './product'
 
-module.exports = {
-  productAPI
-}
+export { productAPI }

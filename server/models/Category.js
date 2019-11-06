@@ -1,6 +1,5 @@
-const Mongoose = require('mongoose')
-const { Schema } = Mongoose
-const { slugify } = require('./../utils')
+import Mongoose, { Schema } from 'mongoose'
+import { slugify } from './../utils'
 
 const CategorySchema = new Schema({
   name: {
@@ -11,7 +10,7 @@ const CategorySchema = new Schema({
   slug: {
     type: String,
     required: false,
-    default() {
+    default () {
       return slugify(this.name)
     }
   },
@@ -24,4 +23,4 @@ const CategorySchema = new Schema({
 
 const Category = Mongoose.model('Category', CategorySchema)
 
-module.exports = Category
+export default Category

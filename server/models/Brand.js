@@ -1,6 +1,5 @@
-const Mongoose = require('mongoose')
-const { Schema } = Mongoose
-const { slugify } = require('./../utils')
+import Mongoose, { Schema } from 'mongoose'
+import { slugify } from './../utils'
 
 const BrandSchema = new Schema({
   name: {
@@ -11,7 +10,7 @@ const BrandSchema = new Schema({
   slug: {
     type: String,
     required: false,
-    default() {
+    default () {
       return slugify(this.name)
     }
   }
@@ -19,4 +18,4 @@ const BrandSchema = new Schema({
 
 const Brand = Mongoose.model('Brand', BrandSchema)
 
-module.exports = Brand
+export default Brand

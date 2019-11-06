@@ -1,16 +1,16 @@
-const { chain } = require("stream-chain")
-const { parser } = require("stream-json")
-const { pick } = require("stream-json/filters/Pick")
-const { ignore } = require("stream-json/filters/Ignore")
-const { streamValues } = require("stream-json/streamers/StreamValues")
+import { chain } from 'stream-chain'
+import { parser } from 'stream-json'
+import { pick } from 'stream-json/filters/Pick'
+import { ignore } from 'stream-json/filters/Ignore'
+import { streamValues } from 'stream-json/streamers/StreamValues'
 
-const fs = require("fs")
-const zlib = require("zlib")
+import fs from 'fs'
+import zlib from 'zlib'
 
 const pipeline = chain([
-  fs.createReadStream("./data/results.json"),
+  fs.createReadStream('./data/results.json'),
   parser(),
-  pick({ filter: "data" }),
+  pick({ filter: 'data' }),
   ignore({ filter: /\b_meta\b/i }),
   streamValues(),
   data => {
@@ -19,6 +19,6 @@ const pipeline = chain([
   }
 ])
 
-let counter = 0
-pipeline.on('data', () => ++counter)
-pipeline.on('end', () => console.log(`The accounting department has ${counter} employees.`))
+// let counter = 0
+// pipeline.on('data', () => ++counter)
+// pipeline.on('end', () => console.log(`The accounting department has ${counter} employees.`))
